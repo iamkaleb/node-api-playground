@@ -53,7 +53,7 @@ router.put('/:id', async (req, res, next) => {
 router.delete('/:id', async (req, res, next) => {
     try {
         await deletePatient(req.params.id);
-        res.status(204);
+        res.sendStatus(204);
     } catch (error) {
         next(error);
     }
